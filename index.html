@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Endangered Species List</title>
+  <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <form id="new-animal-form">
+    <div id="form-wrapper">
+      <div class="form-item">
+        <label for="species" class="primary">Species Name</label>
+        <input type="text" id="species" required/>
+      </div>
+
+      <div class="form-item">
+        <label for="amount" class="primary">Estimated Amount in wild</label>
+        <input type="text" id="amount" required/>
+      </div>
+
+      <div class="form-item">
+        <label for="level" class="primary">Endangerment level</label>
+        <select id="level">
+          <option value="" disabled selected></option>
+          <option value="Critically Endangered (CR)">Critically Endangered (CR)</option>
+          <option value="Endangered (EN)">Endangered (EN)</option>
+          <option value="Vulnerable (VU)">Vulnerable (VU)</option>
+        </select>
+      </div>
+    </div>
+    <input type="submit" value="save"/>
+  </form>
+
+  <form id="delete-all-form">
+    <div id="form-wrapper">
+      <input type="submit" value="delete all"/>
+    </div>
+  </form>
+
+  <h1>Endangered Species</h1>
+  <div id="endangered-list"></div>
+</body>
+</html>
