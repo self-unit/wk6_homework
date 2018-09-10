@@ -7,15 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', handleFormSubmit);
 
   // 1. DOM element that is going to fire the event
-  const deleteForm = document.querySelector('#delete-all-button');
+  const deleteForm = document.querySelector('#delete-all-form');
   // 2. call event listener (add behaviour to it)
-  deleteForm.addEventListener('click', handleFormDelete);
+  form.addEventListener('submit', handleFormDelete);
 
 })
 
 // 3. create behaviour
 const handleFormSubmit = function(event) {
-  console.log('form submitted')
   event.preventDefault();
 
   const newSpecies = document.createElement('p');
@@ -42,7 +41,5 @@ const handleFormSubmit = function(event) {
 }
 
 const handleFormDelete = function(event) {
-  const endangeredList = document.querySelector('#endangered-list');
-  endangeredList.removeChild(endangeredList.firstChild);
-  // console.log(endangeredList.firstChild);
+  endangeredList.removeChild('newDiv');
 }
